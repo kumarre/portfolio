@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="../css/tablet.css">
+    <title>Portfolio Contact</title>
+  </head>
+
+  <body>
+    <!-- Edit Jump to Main Content -->
+    <a class = "jump" href="#jump">Jump to Content</a>
+    <header>
+      <div class="nav">
+        <a href="../index.html"><img src="../images/logo.png" alt="Logo" id = "logo"></a>
+        <nav>
+          <ul class="nav_links">
+            <li class="nav_item"><a href="../index.html">Gallery</a></li>
+            <li class="nav_item"><a href="resume.html">Resume</a></li>
+            <li class="nav_item"><a href="about.html">About</a></li>
+            <li class="nav_item active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="jump" tabindex="0">
+      <h1>Contact</h1>
+      <p>Feel free to contact me through the contact form below and check me out via:</p>
+
+      <div class="socials">
+        <div class="social">
+          <a href="https://www.linkedin.com/in/reeshma-kumar-94b410142/"><img src="../images/linkedin.png" alt="LinkedIn Icon"/></a>
+          <p>LinkedIn</p>
+        </div>
+
+        <div class="social">
+          <a href="https://www.facebook.com/profile.php?id=100011060075890"><img src="../images/facebook.png" alt="Facebook Icon"/></a>
+          <p>Facebook</p>
+        </div>
+
+        <div class="social">
+          <a href="https://twitter.com/ReeshK1"><img src="../images/twitter.png" alt="Twitter Icon"/></a>
+          <p>Twitter</p>
+        </div>
+
+        <div class="social">
+          <a href="https://www.instagram.com/reeshmakumar/"><img src="../images/instagram.png" alt="Instagram Icon"/></a>
+          <p>Instagram</p>
+        </div>
+      </div>
+
+
+      <div class="contact-form"> 
+        <form method=”post” name=”contact_form” action=”contact.php”>
+          <fieldset>
+            <label for="name_id">Name</label>
+            <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+
+            <label for="email_id">Email</label>
+            <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+
+            <label for="phone_id">Phone Number</label>
+            <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" optional>
+
+            <label for="msg">Message</label>
+            <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+
+            <input type="submit" value = "Send">
+          </fieldset>
+        </form>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>By Reeshma Kumar</p>
+    </footer>
+
+  </body>
+</html>
+

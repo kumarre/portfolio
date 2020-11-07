@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/tablet.css">
+    <title>Portfolio Gallery</title>
+  </head>
+
+  <body>
+    <!-- Edit Jump to Main Content -->
+    <a class = "jump" href="#jump">Jump to Content</a>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Logo" id = "logo"></a>
+        <nav>
+          <ul class="nav_links">
+            <li class="nav_item active"><a href="index.html">Gallery</a></li>
+            <li class="nav_item"><a href="html/resume.html">Resume</a></li>
+            <li class="nav_item"><a href="html/about.html">About</a></li>
+            <li class="nav_item"><a href="html/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main id="jump" tabindex="0">
+      <h1>Gallery</h1>
+      <h2>Click on an image to enlarge and view description</h2>
+        <div class="gallery">
+
+          <div class="cell">
+            <img id="img1" src="images/gallery/anti-racist-poster.jpg" alt="Anti Racism Poster" />
+            <div class="overlay" id="1" onclick="reply_click(this)">
+              <div class="text">Anti-Racism Poster</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img2" src="images/gallery/persona.png" alt="Persona" />
+            <div class="overlay" id="2" onclick="reply_click(this)">
+              <div class="text">Persona</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img3" src="images/gallery/scooby-doo.png" alt="Scooby Doo A-Z Poster" />
+            <div class="overlay" id="3" onclick="reply_click(this)">
+              <div class="text">Scooby Doo A-Z Poster</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img4" src="images/gallery/blossoms.jpg" alt="Blossoms & Strength Artwork" />
+            <div class="overlay" id="4" onclick="reply_click(this)">
+              <div class="text">Blossoms & Strength Artwork</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img5" src="images/gallery/class-poster.png" alt="Biology Course Poster" />
+            <div class="overlay" id="5" onclick="reply_click(this)">
+              <div class="text">Biology Course Poster</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img6" src="images/gallery/koala.png" alt="Gestalt Koala Icon" />
+            <div class="overlay" id="6" onclick="reply_click(this)">
+              <div class="text">Koala Icon</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img7" src="images/gallery/hEARt.png" alt="hEARt Listens Non-profit T-Shirt Logo" />
+            <div class="overlay" id="7" onclick="reply_click(this)">
+              <div class="text">Non-profit T-Shirt Logo</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img8" src="images/gallery/zoo-ticket.png" alt="Petting Zoo Ticket" />
+            <div class="overlay" id="8" onclick="reply_click(this)">
+              <div class="text">Petting Zoo Ticket</div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <img id="img9" src="images/gallery/weather-app.png" alt="Minimalistic Weather App" />
+            <div class="overlay" id="9" onclick="reply_click(this)">
+              <div class="text">Minimalistic Weather App</div>
+            </div>
+          </div>        
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" src="javascript:void(0)" alt="Enlarged Image" id="img01">
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+    </main>
+
+    <script>
+
+      function reply_click(clicked) {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("img" + clicked.id);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        clicked.onclick = function(){          
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          captionText.innerHTML = img.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
+    <footer>
+      <p>By Reeshma Kumar</p>
+    </footer>
+  </body>
+</html>
