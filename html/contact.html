@@ -53,7 +53,7 @@
 
 
       <div class="contact-form"> 
-        <form method=”post” name=”contact_form” action=”contact.php”>
+        <form method="post" name=”contact_form” action="https://formspree.io/f/xvovrell">
           <fieldset>
             <label for="name_id">Name</label>
             <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
@@ -62,10 +62,10 @@
             <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
 
             <label for="phone_id">Phone Number</label>
-            <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" optional>
+            <input type="tel" name="phone" id="phone_id" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" optional>
 
-            <label for="msg">Message</label>
-            <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+            <label for="msg_id">Message</label>
+            <textarea placeholder="Enter your message" id = "msg_id" name="mesg" required></textarea><br>
 
             <input type="submit" value = "Send">
           </fieldset>
