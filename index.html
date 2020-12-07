@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FLJ2XRX7P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8FLJ2XRX7P');
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/mobile.css">
     <link rel="stylesheet" type="text/css" href="css/tablet.css">
+    <link rel="stylesheet" type="text/css" href="css/desktop.css">
+    
     <title>Portfolio Gallery</title>
   </head>
 
@@ -12,81 +24,98 @@
     <!-- Edit Jump to Main Content -->
     <a class = "jump" href="#jump">Jump to Content</a>
     <header>
-      <a href="index.html"><img src="images/logo.png" alt="Logo" id = "logo"></a>
-        <nav>
-          <ul class="nav_links">
-            <li class="nav_item active"><a href="index.html">Gallery</a></li>
-            <li class="nav_item"><a href="html/resume.html">Resume</a></li>
-            <li class="nav_item"><a href="html/about.html">About</a></li>
-            <li class="nav_item"><a href="html/contact.html">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="heading">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" id = "logo"></a>
+
+        <!-- menu icon -->
+        <div class="hamburger_menu" onclick="openNav()">
+          <div class="menu_icon"></div>
+          <div class="menu_icon"></div>
+          <div class="menu_icon"></div>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="active" href="index.html">Gallery</a>
+        <a href="html/resume.html">Resume</a>
+        <a href="html/about.html">About</a>
+        <a href="html/contact.html">Contact</a>
+      </div>
+
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item active"><a href="index.html">Gallery</a></li>
+          <li class="nav_item"><a href="html/resume.html">Resume</a></li>
+          <li class="nav_item"><a href="html/about.html">About</a></li>
+          <li class="nav_item"><a href="html/contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="jump" tabindex="0">
       <h1>Gallery</h1>
       <h2>Click on an image to enlarge and view description</h2>
         <div class="gallery">
-
-          <div class="cell">
-            <img id="img1" src="images/gallery/anti-racist-poster.jpg" alt="Anti Racism Poster" />
-            <div class="overlay" id="1" onclick="reply_click(this)">
-              <div class="text">Anti-Racism Poster</div>
-            </div>
+          <div class="cell" id="1" onclick="reply_click(this)">
+              <img id="img1" src="images/gallery/anti-racist-poster.jpg" alt="Anti Racism Poster" />
+              <div class="overlay">
+                <div class="text">Anti-Racism Poster</div>
+              </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="2" onclick="reply_click(this)">
             <img id="img2" src="images/gallery/persona.png" alt="Persona" />
-            <div class="overlay" id="2" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Persona</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="3" onclick="reply_click(this)">
             <img id="img3" src="images/gallery/scooby-doo.png" alt="Scooby Doo A-Z Poster" />
-            <div class="overlay" id="3" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Scooby Doo A-Z Poster</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="4" onclick="reply_click(this)">
             <img id="img4" src="images/gallery/blossoms.jpg" alt="Blossoms & Strength Artwork" />
-            <div class="overlay" id="4" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Blossoms & Strength Artwork</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="5" onclick="reply_click(this)">
             <img id="img5" src="images/gallery/class-poster.png" alt="Biology Course Poster" />
-            <div class="overlay" id="5" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Biology Course Poster</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="6" onclick="reply_click(this)">
             <img id="img6" src="images/gallery/koala.png" alt="Gestalt Koala Icon" />
-            <div class="overlay" id="6" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Koala Icon</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="7" onclick="reply_click(this)">
             <img id="img7" src="images/gallery/hEARt.png" alt="hEARt Listens Non-profit T-Shirt Logo" />
-            <div class="overlay" id="7" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Non-profit T-Shirt Logo</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="8" onclick="reply_click(this)">
             <img id="img8" src="images/gallery/zoo-ticket.png" alt="Petting Zoo Ticket" />
-            <div class="overlay" id="8" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Petting Zoo Ticket</div>
             </div>
           </div>
 
-          <div class="cell">
+          <div class="cell" id="9" onclick="reply_click(this)">
             <img id="img9" src="images/gallery/weather-app.png" alt="Minimalistic Weather App" />
-            <div class="overlay" id="9" onclick="reply_click(this)">
+            <div class="overlay">
               <div class="text">Minimalistic Weather App</div>
             </div>
           </div>        
@@ -104,7 +133,18 @@
     </main>
 
     <script>
+      // Open the sidenav 
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
 
+       // Close/hide the sidenav 
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+
+      // Modal
       function reply_click(clicked) {
         // Get the modal
         var modal = document.getElementById("myModal");

@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FLJ2XRX7P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8FLJ2XRX7P');
+    </script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/mobile.css">
     <link rel="stylesheet" type="text/css" href="../css/tablet.css">
+    <link rel="stylesheet" type="text/css" href="../css/desktop.css">
 
-    <title>Portfolio Gallery</title>
+    <title>Portfolio About</title>
   </head>
 
   <body>
     <!-- Edit Jump to Main Content -->
     <a class = "jump" href="#jump">Jump to Content</a>
     <header>
-      <a href="../index.html"><img src="../images/logo.png" alt="Logo" id = "logo"></a>
-        <nav>
+      <div class="heading">
+        <a href="../index.html"><img src="../images/logo.png" alt="Logo" id = "logo"></a>
+
+        <!-- menu icon -->
+        <div class="hamburger_menu" onclick="openNav()">
+          <div class="menu_icon"></div>
+          <div class="menu_icon"></div>
+          <div class="menu_icon"></div>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../index.html">Gallery</a>
+        <a href="resume.html">Resume</a>
+        <a class="active" href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <nav>
           <ul class="nav_links">
             <li class="nav_item"><a href="../index.html">Gallery</a></li>
             <li class="nav_item"><a href="resume.html">Resume</a></li>
             <li class="nav_item active"><a href="about.html">About</a></li>
             <li class="nav_item"><a href="contact.html">Contact</a></li>
           </ul>
-        </nav>
+      </nav>
     </header>
 
-<!--   WE NEED 9 IMAGES -->
   <main id="jump" tabindex="0">
     <h1>About</h1>
     <div class="about">
@@ -55,5 +83,16 @@
       <p>By Reeshma Kumar</p>
     </footer>
 
+    <script>
+      // Open the sidenav 
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
+
+       // Close/hide the sidenav 
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
   </body>
 </html>
